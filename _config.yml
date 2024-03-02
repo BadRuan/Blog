@@ -3,8 +3,8 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 博客
-subtitle: 记录思考
+title: 我的袜子都是洞
+subtitle: 记录个人简单思考
 description: 源于简单随笔
 keywords:
 author: 我的袜子都是洞
@@ -13,7 +13,7 @@ timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://192.168.3.2/
+url: http://badruan.site/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
