@@ -26,7 +26,8 @@ jobs:
 
       - name: 生成静态文件
         run: |
-          hexo generate
+          npm run clean
+          npm run build
 
       - name: 部署
         run: |
