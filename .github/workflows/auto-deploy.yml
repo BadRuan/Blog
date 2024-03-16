@@ -1,0 +1,34 @@
+name: 自动部署
+
+on: 
+  push:
+    branches: 
+      - main
+
+jobs:
+  deploy:
+    runs-on: unbuntu-latest
+    steps:
+      - name: 检查分支
+        uses: actions/checkout@v2
+        with:
+          ref: main
+      
+      - name: 安装 Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: "12.x"
+
+      - name: 安装 Hexo
+        run: |
+          export TZ='Asia/Shanghai'
+          npm install hexo-cli -g
+
+      - name: 生成静态文件
+        run: |
+          hexo clean
+          hexo generate
+
+      - name: 部署
+        run: |
+          echo "部署成功"
