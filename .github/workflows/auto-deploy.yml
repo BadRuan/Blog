@@ -36,6 +36,6 @@ jobs:
       - name: 部署
         uses: JamesIves/github-pages-deploy-action@v4.5.0
         with:
-		  repository-name: badruan/badruan.github.io
-          token: ${{ secrets.TOKEN }}
-          folder: public
+		  - repository-name: badruan/badruan.github.io
+          - token: ${{ secrets.TOKEN }}
+          - folder: public
