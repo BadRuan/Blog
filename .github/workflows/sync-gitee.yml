@@ -8,10 +8,14 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-22.04
-	setps:
-	  - name: sync-gitee-mirror
-		uses: abersheeran/sync-gitee-mirror@v1-beta
-		with:
-		  repository: uanfumin/blog
-		  username: ${{ secrets.USERNAME }}
-		  password: ${{ secrets.PASSWORD }}
+    permissions:
+      contents: write
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    steps: 
+      - name: sync-gitee-mirror
+        uses: abersheeran/sync-gitee-mirror@v1-beta
+        with:
+          repository: uanfumin/blog
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
