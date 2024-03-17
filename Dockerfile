@@ -1,6 +1,6 @@
 FROM bitnami/git:latest as git_clone
 WORKDIR /app
-RUN git clone https://gitee.com/ruanfumin/static_blog.git
+RUN git clone https://gitee.com/ruanfumin/blog.git
 
 FROM node:21-alpine3.18 as build
 WORKDIR /app/blog
