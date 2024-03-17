@@ -1,0 +1,17 @@
+name: Sync Gitee
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-22.04
+	setps:
+	  - name: sync-gitee-mirror
+		uses: abersheeran/sync-gitee-mirror@v1-beta
+		with:
+		  repository: uanfumin/blog
+		  username: ${{ secrets.USERNAME }}
+		  password: ${{ secrets.PASSWORD }}
