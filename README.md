@@ -12,12 +12,12 @@ docker build -t my-blog:v1 .
 
 ### 启动Docker镜像
 ```shell
-docker run -itd --name blog -P my-blog:v1
+docker run -itd --name blog -p 80:80 my-blog:v1
 ```
 
-### Dockerfile基本步骤
+### Dockerfile步骤
 1. git clone 博客项目
-2. 安装node环境，安装依赖并生成静态博客文件
+2. 安装node环境，安装node依赖并生成静态博客文件
 3. 部署nginx环境
 
 

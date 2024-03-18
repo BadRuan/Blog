@@ -4,7 +4,7 @@ RUN git clone https://gitee.com/ruanfumin/blog.git
 
 FROM node:21-alpine3.18 as build
 WORKDIR /app/blog
-COPY --from=git_clone /app/static_blog .
+COPY --from=git_clone /app/blog .
 RUN npm install \
         && npm run build
 
