@@ -8,10 +8,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Sync to Gitee
-        uses: wearerequired/git-mirror-action@master
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.GITEE_PRIVATE_KEY }}
+      - name: 部署git代码
+        uses: actions/checkout@v4
+      - name: 同步 Gitee
+        uses: wangchucheng/git-repo-sync@v0.1.0
         with:
-          source-repo: git@github.com:BadRuan/badruan.github.io.git
-          destination-repo: git@gitee.com:ruanfumin/blog.git
+          target-url: git@gitee.com:ruanfumin/blog.git
+          target-username: ruanfumin
+          target-token: ${{ secrets.GITEE_PRIVATE_KEY }}
