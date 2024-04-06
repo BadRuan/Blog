@@ -8,7 +8,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: 部署代码
+      - name: 下载代码
         uses: actions/checkout@v4
         
       - name: 设置 Node.js 环境
@@ -19,4 +19,10 @@ jobs:
         run: |
             npm install
             npm run build
-            echo "部署成功"
+      - name: 部署
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          commit_message: ${{ github.event.head_commit.message }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          force_orphan: true
