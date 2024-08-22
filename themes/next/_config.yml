@@ -36,14 +36,15 @@ custom_file_path:
 # Scheme Settings
 # ---------------------------------------------------------------
 
-# Schemes
-scheme: Muse
+# Schemes 主题样式
+scheme: Gemini
+#scheme: Muse
 #scheme: Mist
 #scheme: Pisces
 #scheme: Gemini
 
 # Dark Mode
-darkmode: false
+darkmode: auto
 
 
 # ---------------------------------------------------------------
@@ -97,12 +98,13 @@ open_graph:
 # External url should start with http:// or https://
 menu:
   home: / || fa fa-home
-  about: /about/ || fa fa-user
   #tags: /tags/ || fa fa-tags
   categories: /categories/ || fa fa-th
   archives: /archives/ || fa fa-archive
+  life-events: /life-events/ || fa fa-calendar
+  about: /about/ || fa fa-user
   # schedule: /schedule/ || fa fa-calendar
-  #sitemap: /sitemap.xml || fa fa-sitemap
+  # sitemap: /sitemap.xml || fa fa-sitemap
   # commonweal: /404/ || fa fa-heartbeat
 
 # Enable / Disable menu icons / item badges.
@@ -141,11 +143,11 @@ sidebar:
 # Sidebar Avatar
 avatar:
   # Replace the default image and set the url here.
-  url: #/images/avatar.gif
+  url: /images/avatar.jpg
   # If true, the avatar will be displayed in circle.
-  rounded: false
+  rounded: true
   # If true, the avatar will be rotated with the cursor.
-  rotated: false
+  rotated: true
 
 # Posts / Categories / Tags in sidebar.
 site_state: true
@@ -157,7 +159,7 @@ site_state: true
 social:
   GitHub: https://github.com/BadRuan || fab fa-github
   E-Mail: mailto:ruanfm@qq.com || fa fa-envelope
-  Weibo: https://weibo.com/u/1583624660 || fab fa-weibo
+  # Weibo: https://weibo.com/u/1583624660 || fab fa-weibo
   #Twitter: https://twitter.com/yourname || fab fa-twitter
   #FB Page: https://www.facebook.com/yourname || fab fa-facebook
   #StackOverflow: https://stackoverflow.com/yourname || fab fa-stack-overflow
@@ -173,13 +175,13 @@ social_icons:
 # Blog rolls
 links_settings:
   icon: fa fa-globe
-  # Available values: block | inline
+  Available values: block
   layout: block
 
 # 友情链接
-# links:
-#   刘未鹏: https://mindhacks.cn/
-#   编程思想: https://blog.zshnb.com/
+links:
+  刘未鹏: https://mindhacks.cn/
+  编程思想: https://blog.zshnb.com/
 
 # Table of Contents in the Sidebar
 # Front-matter variable (nonsupport wrap expand_all).
@@ -228,9 +230,9 @@ footer:
     enable: true
     icp: 皖ICP备2024036993号
     # The digit in the num of gongan beian.
-    gongan_id:
+    gongan_id: 
     # The full num of gongan beian.
-    gongan_num:
+    gongan_num: 皖ICP备2024036993号
     # The icon for gongan beian. Login and See: https://beian.mps.gov.cn/web/business/businessHome/website
     gongan_icon_url: https://beian.mps.gov.cn
 
@@ -261,6 +263,7 @@ post_meta:
 symbols_count_time:
   separated_meta: true
   item_text_total: false
+
 
 # Use icon instead of the symbol # to indicate the tag at the bottom of the post
 tag_icon: true
@@ -372,12 +375,12 @@ codeblock:
     dark: prism-dark
   # Add copy button on codeblock
   copy_button:
-    enable: false
+    enable: true
     # Available values: default | flat | mac
     style:
   # Fold code block
   fold:
-    enable: false
+    enable: true
     height: 500
 
 back2top:
@@ -385,7 +388,7 @@ back2top:
   # Back to top in sidebar.
   sidebar: false
   # Scroll percent label in b2t button.
-  scrollpercent: false
+  scrollpercent: true
 
 # Reading progress bar
 reading_progress:
